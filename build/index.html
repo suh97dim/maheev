@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="msapplication-TileColor" content="undefined">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="msapplication-TileImage" content="">
+    <meta name="theme-color" content="undefined">
+    <meta name="msapplication-navbutton-color" content="undefined">
+    <meta name="apple-mobile-web-app-status-bar-style" content="undefined">
+    <meta name="description" content="undefined">
+    <title>Главная страница</title>
+    <link type="image/x-icon" href="favicon.ico" rel="icon">
+    <link type="image/svg+xml" href="#" rel="icon">
+    <link href="#" rel="apple-touch-icon">
+    <link href="#" color="undefined" rel="mask-icon">
+    <link type="text/css" href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/datepicker-bootstrap/datepicker.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/croppie/croppie.css" rel="stylesheet">
+    <link type="text/css" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet">
+    <link type="text/css" href="libs/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/fancybox/fancybox.css" rel="stylesheet">
+    <link type="text/css" href="css/main.min.css" rel="stylesheet">
+    <body></body>
+    <div class="o-h pos-r">
+      <header class="page-header">
+        <div class="container header-container"> 
+          <div class="row ai-c jc-sb">
+            <div class="col-auto d-xll-n">
+              <button class="hamburger js-hamburger collapsed" type="button" data-toggle="collapse" data-target=".page-header-menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+            </div>
+            <div class="col-auto"><a href="/"><img class="logo-img" src="img/logo.svg" alt="Логотип"/></a></div>
+            <div class="col-auto page-header-menu collapse">
+              <ul class="nav nav-header">
+                <li class="nav-item"><a class="nav-link-header" href="">Правила</a></li>
+                <li class="nav-item"><a class="nav-link-header mt-100" href="#prizes">Призы</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="#winner">Победители</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="#faq">Вопросы и ответы</a></li>
+              </ul>
+            </div>
+            <div class="col-auto"><a class="link-gold" type="button" data-bs-toggle="modal" data-bs-target="#modal-enter"><img class="mr-10" src="img/icons/user.svg" alt="Войти"/><span class="d-none d-md-inline">Личный кабинет</span></a></div>
+          </div>
+        </div>
+      </header>
+      <div class="main-banner"></div>
+      <div class="container"> 
+        <div class="col-12 col-sm-8"> 
+          <div class="par-20 text-center c-white"> <span class="label">Махеевъ </span>— главный ингредиент праздника </div><img class="main-banner-text mt-40" src="img/main-text.webp" alt="Главное изображение"/>
+          <button class="btn btn-red mx-auto mt-50"> <span class="gold">Зарегистрировать чек</span></button>
+          <div class="par-20 text-center mt-60 c-green-middle">Срок проведения акции: с 07 ноября 2023 года по 08 января 2024 года.</div>
+        </div>
+      </div>
+      <div class="container mt-80 mt-lg-200">
+        <div class="row how-do">
+          <div class="col-sm-12 text-center">
+            <h2 class="gold-lg">Как участвовать </h2>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="how-do__item"> <img src="img/step-1.webp"/>
+              <div class="step-count">01</div>
+              <h4 class="gold text-center">Покупайте</h4>
+              <div class="par-20 text-center c-green-light">любой продукт бренда «Махеевъ» из <a href="/">списка</a> минимум на 300 руб в одном чеке. </div>
+              <div class="blur-bg"></div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="how-do__item"> <img src="img/step-2.webp"/>
+              <div class="step-count">02</div>
+              <h4 class="gold text-center">Регистрируйте чек</h4>
+              <div class="par-20 text-center c-green-light">в личном кабинете на промо-сайте kupi-maheev.ru или через чат-бот Telegram<a target="_blank" href="https://t.me/kupi_maheev_bot"> @kupi_maheev_bot. </a></div>
+              <div class="blur-bg"></div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 touch-center">
+            <div class="how-do__item"> <img src="img/step-3.webp"/>
+              <div class="step-count">03</div>
+              <h4 class="gold text-center">Выигрывайте</h4>
+              <div class="par-20 text-center c-green-light">крутые призы от МахеевЪ.</div>
+              <div class="blur-bg"></div>
+            </div>
+          </div>
+          <div class="col-12"> 
+            <button class="btn gold-border mx-auto mt-50"> <img src="img/icons/download.svg"/><span class="gold ml-15">Зарегистрировать чек</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid py-80 py-md-100 chat-bot-bg"> 
+        <div class="container"> 
+          <div class="row">
+            <div class="col">
+              <div class="chat-bot">
+                <div class="row">
+                  <div class="col-12 col-md-5"> 
+                    <h3>С чат-ботом <br> участвовать проще!</h3>
+                  </div>
+                  <div class="col-12 col-md-7"> 
+                    <ol class="list-group-numbered">
+                      <li class="list-group-item chat-bot__li"> <strong>Покупайте </strong> «МахеевЪ» в ТС «Монетка» и сохраняйте чеки с «7» ноября 2023 года по «08» января 2024 года</li>
+                      <li class="list-group-item chat-bot__li"> <strong>Сфотографируйте QR-код  </strong> чека и загрузите его на сайте или в чат-бот Telegram <a target="_blank" href="https://t.me/kupi_maheev_bot"> @kupi_maheev_bot. </a></li>
+                      <li class="list-group-item chat-bot__li"> <strong> Найти бот  </strong>  можно по названию @kupi_maheev_bot, отправить любое сообщение в бот и следовать дальнейшим инструкциям.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row" id="prizes">
+          <div class="col-sm-12 text-center">
+            <h2 class="gold-lg">Выигрывайте призы </h2>
+          </div>
+          <div class="col-12 col-sm-6 col-xs-12 col-md-4">
+            <div class="prize"><img class="img-fluid" src="img/prize-1.webp" alt="" width=""/>
+              <div class="prize-details"> 
+                <h4 class="gold">Ежедневные</h4>
+                <ul>
+                  <li class="win-prize par-16">Сертификат 1000 Р в магазин «Монетка»</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xs-12 col-md-4 mt-24 mt-sm-0">
+            <div class="prize"><img class="img-fluid" src="img/prize-2.webp" alt="" width=""/>
+              <div class="prize-details"> 
+                <h4 class="gold">Еженедельные</h4>
+                <ul>
+                  <li class="win-prize par-16">Умная колонка Алиса</li>
+                  <li class="win-prize par-16">Пароочиститель KARCHER SC 1 EasyFix</li>
+                  <li class="win-prize par-16">Мини проектор</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xs-12 col-md-4 touch-center mt-24 mt-md-0">
+            <div class="prize"> <img class="img-fluid" src="img/prize-3.webp" alt="" width=""/>
+              <div class="prize-details"> 
+                <h4 class="gold">Ежемесячные</h4>
+                <ul>
+                  <li class="win-prize par-16">Телевизор Яндекс с Алисой диаг 43,</li>
+                  <li class="win-prize par-16">Электрогриль Tefal Optigrill</li>
+                  <li class="win-prize par-16">Кофемашина брендированная</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-30 mt-md-70">
+            <div class="main-prize">
+              <h3 class="gold text-center">Главный приз «Сертификат» на </h3><img src="img/main-prize-main.webp" alt=""/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid green-bg py-60 py-lg-100" id="winner"> 
+        <div class="container">
+          <div class="row"> 
+            <div class="col-sm-12">
+              <h2 class="gold-lg text-center">Победители</h2>
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="col-12 col-lg-8">
+              <div class="winners-nav"> 
+                <button class="table-btn active" data-prize> <span class="gold">Ежедневный</span></button>
+                <button class="table-btn" data-prize> <span class="gold">Еженедельный</span></button>
+                <button class="table-btn" data-prize> <span class="gold">Суперприз</span></button>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 my-30 m-lg-0">
+              <div class="winners-search"> 
+                <button class="winners-search__btn"> </button>
+                <input class="mask-phone" type="text" aria-controls="winners" id="search" placeholder="поиск по номеру телефона">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <table id="winners"> 
+                <thead> 
+                  <tr class="trow th-row"> 
+                    <th class="th-column th-data">Дата розыгрыша</th>
+                    <th class="th-column th-name">Имя</th>
+                    <th class="th-column th-city">Город</th>
+                    <th class="th-column th-phone">Номер телефона</th>
+                  </tr>
+                </thead>
+                <tbody> 
+                  <tr class="trow td-row"> 
+                    <td class="t-column table-date">12.11.2022</td>
+                    <td class="t-column table-name">В******</td>
+                    <td class="t-column table-city">Санкт-Петербург</td>
+                    <td class="t-column table-phone">+7 (999) *** ** 99)</td>
+                  </tr>
+                  <tr class="trow td-row"> 
+                    <td class="t-column table-date">12.11.2022</td>
+                    <td class="t-column table-name">В******</td>
+                    <td class="t-column table-city">Санкт-Петербург</td>
+                    <td class="t-column table-phone">+7 (999) *** ** 99)</td>
+                  </tr>
+                  <tr class="trow td-row"> 
+                    <td class="t-column table-date">12.11.2022</td>
+                    <td class="t-column table-name">В******</td>
+                    <td class="t-column table-city">Санкт-Петербург</td>
+                    <td class="t-column table-phone">+7 (999) *** ** 99)</td>
+                  </tr>
+                  <tr class="trow td-row"> 
+                    <td class="t-column table-date">12.11.2022</td>
+                    <td class="t-column table-name">В******</td>
+                    <td class="t-column table-city">Санкт-Петербург</td>
+                    <td class="t-column table-phone">+7 (999) *** ** 99)</td>
+                  </tr>
+                  <tr class="trow td-row"> 
+                    <td class="t-column table-date">12.11.2022</td>
+                    <td class="t-column table-name">В******</td>
+                    <td class="t-column table-city">Санкт-Петербург</td>
+                    <td class="t-column table-phone">+7 (999) *** ** 99)</td>
+                  </tr>
+                  <tr class="trow td-row"> 
+                    <td class="t-column table-date">12.11.2022</td>
+                    <td class="t-column table-name">В******</td>
+                    <td class="t-column table-city">Санкт-Петербург</td>
+                    <td class="t-column table-phone">+7 (999) *** ** 99)</td>
+                  </tr>
+                  <tr class="trow td-row"> 
+                    <td class="t-column table-date">12.11.2022</td>
+                    <td class="t-column table-name">В******</td>
+                    <td class="t-column table-city">Санкт-Петербург</td>
+                    <td class="t-column table-phone">+7 (999) *** ** 99)</td>
+                  </tr>
+                  <tr class="trow td-row"> 
+                    <td class="t-column table-date">12.11.2022</td>
+                    <td class="t-column table-name">В******</td>
+                    <td class="t-column table-city">Санкт-Петербург</td>
+                    <td class="t-column table-phone">+7 (999) *** ** 99)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid gold-bg py-60 py-lg-100" id="faq"> 
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2 class="c-brown text-center">Вопросы и ответы</h2>
+            </div>
+            <div class="col-md-7"> 
+              <div class="qa-wrapper" id="faqData">
+                <div class="qa-wrapper-scroll"> 
+                  <div class="qa-item default-active active">
+                    <div class="qa-title">В какие сроки проводится Акция? </div>
+                    <div class="qa-details">
+                      Призы, стоимость которых превышает 4 000 (четыре тысячи) руб., облагаются налогом в размере 35%.Налог на Еженедельные призы, Приз за участие в конкурсе в интерактиве и Главный приз оплачивает организатор акции, который, как налоговый агент, на основании поручения от победителя, удержит в соответствие с требованиями законодательства РФ НДФЛ по ставке 35%.Гарантированные приз в виде баллов на счет карты лояльности «Х5 Клуб» не облагаются налогом в соответствии со ст. 217 НК РФ.  ds 
+                      dsdsd <br> dsdsd
+                    </div>
+                  </div>
+                  <div class="qa-item">
+                    <div class="qa-title">Какой продукт необходимо купить, чтобы принять участие? </div>
+                    <div class="qa-details"></div>
+                  </div>
+                  <div class="qa-item">
+                    <div class="qa-title">До какого числа выдают призы </div>
+                    <div class="qa-details"></div>
+                  </div>
+                  <div class="qa-item">
+                    <div class="qa-title">В какие сроки проводится Акция?</div>
+                    <div class="qa-details"></div>
+                  </div>
+                  <div class="qa-item">
+                    <div class="qa-title">Как я узнаю что стал участником акции?</div>
+                    <div class="qa-details"></div>
+                  </div>
+                  <div class="qa-item">
+                    <div class="qa-title">Какие призы я могу получить за участие в акции?</div>
+                    <div class="qa-details"></div>
+                  </div>
+                  <div class="qa-item">
+                    <div class="qa-title">Надо ли платить налоги с приза?</div>
+                    <div class="qa-details"></div>
+                  </div>
+                  <div class="qa-item">
+                    <div class="qa-title">Какой продукт необходимо купить, чтобы принять участие? </div>
+                    <div class="qa-details"></div>
+                  </div>
+                  <div class="qa-item">
+                    <div class="qa-title">Какой продукт необходимо купить, чтобы принять участие? </div>
+                    <div class="qa-details"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5"> 
+              <div class="contact-form">
+                <h4 class="c-brown">Нет ответа на ваш вопрос?</h4>
+                <div class="par-16 c-brown">Отправьте нам сообщение, мы обязательно ответим </div>
+                <form action=""> 
+                  <input class="text-input" type="text" placeholder="Имя">
+                  <input class="text-input" type="text" placeholder="Фамилия">
+                  <input class="text-input" type="email" placeholder="E-mail">
+                  <textarea placeholder="Текст сообщения"></textarea>
+                  <button class="btn green-btn contact-form-btn"> <span class="gold">Отправить</span></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container"> 
+          <div class="row"> 
+            <div class="col-sm-6 col-md-4"><a class="link-gold text-center text-sm-end" href="#">
+                 Полные правила акции </a></div>
+            <div class="col-sm-12 col-md-4 order-4 order-md-0 mt-30 mt-md-0">
+              <div class="social-icons"> <a href="#" target="_blank"><img src="img/icons/youtube.svg" alt="Youtube"/></a><a href="#" target="_blank"><img src="img/icons/vk.svg" alt="Youtube"/></a><a href="#" target="_blank"><img src="img/icons/odnoklassniki.svg" alt="Youtube"/></a></div>
+            </div>
+            <div class="col-sm-6 col-md-4"><a class="link-gold text-center text-sm-start" href="mailto:help@kupi-maheev.ru">
+                 help@kupi-maheev.ru </a></div>
+            <div class="col-12">
+              <div class="par-14 footer-dest">Общий срок проведения акции с 07 ноября 2023 года по 31 января 2024 года. Срок регистрации участников в акции, срок совершения покупок и регистрации чеков: с 07 ноября 2023 года по 08 января 2024 года. Акция проводится в розничных магазинах торговой сети «Монетка», продающих продукцию ТМ «МахеевЪ» на территории РФ. Правила акции, информацию об Организаторе акции, порядке и условиях её проведения можно узнать на сайте https://www.kupi-maheev.ru/. <br>Организатор акции – ООО «Ай-Экшн».</div>
+            </div>
+            <div class="col-12"> <a class="footer-link" href="#">Согласие на обработку персональных данных</a><a class="footer-link" href="#">Политика конфиденциальности</a></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="libs/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="libs/datepicker-bootstrap/js/datepicker.js"></script>
+    <script src="libs/datepicker-bootstrap/js/datepicker.ru-RU.js"></script>
+    <script src="libs/bootstrap-fileinput/js/locales/ru.js"></script>
+    <script src="libs/DataTables/datatables.min.js"></script>
+    <script src="libs/croppie/croppie.min.js"></script>
+    <script src="libs/jquery.maskedinput.min.js"></script>
+    <script src="libs/parallax/tweenmax.min.js"></script>
+    <script src="libs/parallax/jquery-parallax.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/fancybox/fancybox.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+</html>
