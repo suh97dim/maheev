@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="msapplication-TileColor" content="undefined">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="msapplication-TileImage" content="">
+    <meta name="theme-color" content="undefined">
+    <meta name="msapplication-navbutton-color" content="undefined">
+    <meta name="apple-mobile-web-app-status-bar-style" content="undefined">
+    <meta name="description" content="undefined">
+    <title>Личный кабинет</title>
+    <link type="image/x-icon" href="favicon.ico" rel="icon">
+    <link type="image/svg+xml" href="#" rel="icon">
+    <link href="#" rel="apple-touch-icon">
+    <link href="#" color="undefined" rel="mask-icon">
+    <link type="text/css" href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/datepicker-bootstrap/datepicker.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/croppie/croppie.css" rel="stylesheet">
+    <link type="text/css" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet">
+    <link type="text/css" href="libs/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/fancybox/fancybox.css" rel="stylesheet">
+    <link type="text/css" href="css/main.min.css" rel="stylesheet">
+    <body></body>
+    <div class="o-h pos-r">
+      <header class="page-header">
+        <div class="container header-container"> 
+          <div class="row ai-c jc-sb">
+            <div class="col-auto d-xll-n">
+              <button class="hamburger js-hamburger collapsed" type="button" data-toggle="collapse" data-target=".page-header-menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+            </div>
+            <div class="col-auto"><a href="/"><img class="logo-img" src="img/logo.svg" alt="Логотип"/></a></div>
+            <div class="col-auto page-header-menu collapse">
+              <ul class="nav nav-header">
+                <li class="nav-item"><a class="nav-link-header" href="">Правила</a></li>
+                <li class="nav-item"><a class="nav-link-header mt-100" href="#prizes">Призы</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="#winner">Победители</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="#faq">Вопросы и ответы</a></li>
+              </ul>
+            </div>
+            <div class="col-auto"><a class="link-gold" type="button" data-bs-toggle="modal" data-bs-target="#modal-enter"><img class="mr-10" src="img/icons/user.svg" alt="Войти"/><span class="d-none d-md-inline">Личный кабинет</span></a></div>
+          </div>
+        </div>
+      </header>
+      <div class="container"> 
+        <div class="row">
+          <div class="col"> 
+            <h2 class="text-center gold-lg">Личный кабинет</h2>
+          </div>
+        </div>
+        <ul class="nav nav-lk row"> 
+          <li class="nav-lk-item col-6 col-lg-3"><a class="nav-lk-link active" href="#tab-1" data-bs-toggle="tab"> <span class="gold">Мои чеки</span></a></li>
+          <li class="nav-lk-item col-6 col-lg-3"><a class="nav-lk-link" href="#tab-2" data-bs-toggle="tab"> <span class="gold"> Мои заявки</span></a></li>
+          <li class="nav-lk-item col-6 col-lg-3 mt-24 mt-lg-0"><a class="nav-lk-link" href="#tab-3" data-bs-toggle="tab"><span class="gold">Мои призы</span></a></li>
+          <li class="nav-lk-item col-6 col-lg-3 mt-24 mt-lg-0"> <a class="nav-lk-link" href="#tab-4" data-bs-toggle="tab"> <span class="gold">Персональные данные</span></a></li>
+        </ul>
+        <div class="row">
+          <div class="tab-content">
+            <div class="tab-pane fade lk-content active show" id="tab-1">
+              <div class="row"> 
+                <div class="col-12"> 
+                  <div class="lk-tab-title text-center">Зарегистрировать чек</div>
+                </div>
+              </div>
+              <div class="row"> 
+                <div class="col-12 gold text-center mb-40">
+                  <div class="lk-step"> 
+                    <div class="lk-step-box">Шаг 1. Загрузите фото</div>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <label class="upload-photo" for="file-receipt"> <img src="img/icons/upload-receipt.svg"/>Загрузить фото чека
+                  </label>
+                  <input id="file-receipt" type="file" accept="image/*">
+                </div>
+                <div class="col-6">
+                  <h5 class="gold">К регистрации в Акции принимаются чеки, если:</h5>
+                  <ul>
+                    <li class="li-lk">фото чека качественное, чек сфотографирован полностью, не стоит загружать фотографию только QR кода</li>
+                    <li class="li-lk">данные, указанные на чеке, такие как дата покупки, время покупки, итого по сумме чека, №ФН, №ФД, №ФПД введены правильно</li>
+                    <li class="li-lk">кассовый чек должен быть выбит кассиром в период c 11.10.2021 по 28.11.2021</li>
+                    <li class="li-lk">все символы должны быть четко видны</li>
+                    <li class="li-lk">наличие QR-кода на кассовом чеке обязательно, он должен быть читаемый</li>
+                    <li class="li-lk">в чеке должно отображаться наименование Акционной продукции</li>
+                  </ul>
+                </div>
+                <div class="col-12 mt-40"> 
+                  <button class="btn-lk btn-red" id="upload-image" type="submit"> <span class="gold">Далее</span></button>
+                </div>
+                <div class="col-6"> 
+                  <div id="img-crop"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade lk-content" id="tab-2">
+              <div class="row"> 
+                <div class="col-12"> 
+                  <div class="lk-tab-title text-center">Мои заявки</div>
+                </div>
+              </div>
+              <div class="row"> 
+                <div class="col-12"> 
+                  <div class="table-responsive">
+                    <table class="receved-code-table g-table" id="appl">
+                      <thead>
+                        <tr>
+                          <th class="nowrap date-appl">Дата и время заявки</th>
+                          <th class="nowrap num-appl">№ заявки</th>
+                          <th class="nowrap date-event">Дата розыгрыша</th>
+                          <th class="nowrap type-event">Тип розыгрыша</th>
+                          <th class="status-event">Статус</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>12.11.2022</td>
+                          <td>2</td>
+                          <td>12.11.2022</td>
+                          <td>Еженедельный</td>
+                          <td>
+                            <div class="status">Ожидает розыгрыша</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12.11.2022</td>
+                          <td>2</td>
+                          <td>12.11.2022</td>
+                          <td>Еженедельный</td>
+                          <td>
+                            <div class="status">Ожидает розыгрыша</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12.11.2022</td>
+                          <td>2</td>
+                          <td>12.11.2022</td>
+                          <td>Еженедельный</td>
+                          <td>
+                            <div class="status status_active">Участвует сегодня</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12.11.2022</td>
+                          <td>2</td>
+                          <td>12.11.2022</td>
+                          <td>Еженедельный</td>
+                          <td>
+                            <div class="status status_canceled">Не выиграла</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12.11.2022</td>
+                          <td>2</td>
+                          <td>12.11.2022</td>
+                          <td>Еженедельный</td>
+                          <td>
+                            <div class="status status_success">500 Р</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12.11.2022</td>
+                          <td>2</td>
+                          <td>12.11.2022</td>
+                          <td>Еженедельный</td>
+                          <td>
+                            <div class="status">Ожидает розыгрыша</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12.11.2022</td>
+                          <td>2</td>
+                          <td>12.11.2022</td>
+                          <td>Еженедельный</td>
+                          <td>
+                            <div class="status">Ожидает розыгрыша</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12.11.2022</td>
+                          <td>2</td>
+                          <td>12.11.2022</td>
+                          <td>Еженедельный</td>
+                          <td>
+                            <div class="status">Ожидает розыгрыша</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12.11.2022</td>
+                          <td>2</td>
+                          <td>12.11.2022</td>
+                          <td>Еженедельный</td>
+                          <td>
+                            <div class="status">Ожидает розыгрыша</div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade lk-content" id="tab-3">
+              <div class="row"> 
+                <div class="col-12"> 
+                  <div class="lk-tab-title text-center">Мои призы</div>
+                </div>
+              </div>
+              <div class="row"> 
+                <div class="col-12 gold text-center">
+                  <h3>Ежедневные</h3>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="lk-prize prize-blocked"> <img src="img/lk-prizes/certificate.webp" alt="Сертификат"/><span>
+                      <h5 class="gold">Сертификат 1000 Р в магазин «Монетка» </h5>
+                      <div class="par-16 c-white">Может стать твоим!</div></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-50">
+                <div class="col-12 gold text-center">
+                  <h3>Еженедельные</h3>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="lk-prize"><img src="img/lk-prizes/speaker.webp" alt="Умная колонка Алиса"/><span>
+                      <h5 class="gold">Умная колонка Алиса </h5>
+                      <div class="par-16 c-white">Дата розыгрыша: 22.10.22</div><a class="to-data-tab btn-sm gold-bg mt-20" type="button"> Заполнить данные</a></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 mt-12 mt-sm-0">
+                  <div class="lk-prize prize-blocked"> <img src="img/lk-prizes/projector.webp" alt="Проектор"/><span>
+                      <h5 class="gold">Мини проектор </h5>
+                      <div class="par-16 c-white">Может стать твоим!</div></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 mt-12 mt-sm-24">
+                  <div class="lk-prize prize-blocked"> <img src="img/lk-prizes/steam-cleaner.webp" alt="Пароочиститель"/><span>
+                      <h5 class="gold">Пароочиститель <br>KARCHER SC 1 EasyFix</h5>
+                      <div class="par-16 c-white">Может стать твоим!</div></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-50">
+                <div class="col-12 gold text-center">
+                  <h3>Ежемесячные</h3>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="lk-prize prize-blocked"> <img src="img/lk-prizes/coffee-machine.webp" alt="Кофемашина"/><span>
+                      <h5 class="gold">Кофемашина брендированная</h5>
+                      <div class="par-16 c-white">Может стать твоим!</div></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 mt-12 mt-sm-0">
+                  <div class="lk-prize"><img src="img/lk-prizes/tv.webp" alt="Телевизор"/><span>
+                      <h5 class="gold">Телевизор Яндекс <br> с Алисой 43” </h5>
+                      <div class="par-16 c-white">Может стать твоим!</div><span class="d-inline-block" data-toggle="tooltip" title="Заполните запрашиваемые поля во вкладке «Мои данные». Только после получения необходимой информации мы сможем вручить Вам приз" data-placement="left"><a class="to-data-tab btn-sm gold-bg mt-20" type="button"> Заполнить данные</a></span></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 mt-12 mt-sm-24">
+                  <div class="lk-prize prize-blocked"> <img src="img/lk-prizes/grill.webp" alt="Пароочиститель"/><span>
+                      <h5 class="gold">Электрогриль Tefal Optigrill</h5>
+                      <div class="par-16 c-white">Может стать твоим!</div></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-50">
+                <div class="col-12 gold text-center">
+                  <h3>Главный приз</h3>
+                </div>
+                <div class="col-12">
+                  <div class="main-prize-lk">
+                    <h4 class="gold text-center">«Сертификат» на</h4><span class="d-inline-block main-prize-btn" data-toggle="tooltip" title="Заполните запрашиваемые поля во вкладке «Мои данные». Только после получения необходимой информации мы сможем вручить Вам приз" data-placement="left"><a class="to-data-tab btn-sm gold-bg mt-20" type="button"> Заполнить данные</a></span><img src="img/main-prize-main.webp" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade lk-content" id="tab-4">
+              <div class="row"> 
+                <div class="col"> 
+                  <div class="lk-tab-title text-center">Персональные данные</div>
+                </div>
+              </div>
+              <div class="row"> 
+                <div class="col"> 
+                  <div class="lk-form"> 
+                    <form class="row needs-validation" novalidate>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="text" placeholder="Фамилия" required value="Иванов">
+                        <div class="invalid-feedback">Введите фамилию</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="text" placeholder="Имя" required value="Дмитрий">
+                        <div class="invalid-feedback">Введите имя</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="text" placeholder="Отчество" required value="Алексеевич">
+                        <div class="invalid-feedback">Введите отчество</div>
+                      </div>
+                      <div class="col-sm-6 mb-xl-25">
+                        <div class="form-control-wrap mb-22 radio-wrap">
+                          <div class="text-label">Пол:</div>
+                          <label class="radio-label" for="male">
+                            <input class="radio-input" type="radio" value="Муж" checked name="gender" id="male">Муж.
+                          </label>
+                          <label class="radio-label" for="female">
+                            <input class="radio-input" type="radio" value="Жен" name="gender" id="female">Жен.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="text" placeholder="Дата рождения" data-toggle="datepicker" required value="08.22.2023">
+                        <div class="invalid-feedback">Введите дату рождения</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="text" placeholder="Город проживания" required value="Москва">
+                        <div class="invalid-feedback">Введите дату город проживания</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control mask-phone" placeholder="Номер телефона" required value="88805553535">
+                        <div class="invalid-feedback">Введите номер телефона</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="email" placeholder="Номер телефона" required value="user@mail.ru">
+                        <div class="invalid-feedback">Введите E-mail</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <button class="btn-lk btn-red w-100 px-0" type="submit"> <span class="gold">Сохранить данные</span></button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="row"> 
+                <div class="col">
+                  <div class="lk-tab-title text-center">Персональные данные</div>
+                  <div class="lk-attention"><img src="img/icons/attention.svg"/>
+                    <div class="par-16">Персональные данные требуются в соответствии законом для уплаты налогов при получении призов на общую сумму свыше 4000 рублей. Налог оплачивает Организатор. Если общая сумма призов составляет меньше 4000 рублей — добавлять персональные данные не обязательно. Для получения призов на сумму более 4000 рублей предоставление персональных данных является обязательным. </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-60"> 
+                <div class="col">
+                  <div class="lk-form">
+                    <h3 class="gold">Регистрационные данные:</h3>
+                    <form class="row needs-validation" novalidate>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="text" placeholder="Фамилия" required>
+                        <div class="invalid-feedback">Введите фамилию</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="text" placeholder="Имя" required>
+                        <div class="invalid-feedback">Введите имя</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="text" placeholder="Отчество" required>
+                        <div class="invalid-feedback">Введите отчество</div>
+                      </div>
+                      <div class="col-sm-6 mb-xl-25">
+                        <div class="form-control-wrap mb-22 radio-wrap">
+                          <div class="text-label">Пол:</div>
+                          <label class="radio-label" for="male">
+                            <input class="radio-input" type="radio" value="Муж" checked name="gender" id="male">Муж.
+                          </label>
+                          <label class="radio-label" for="female">
+                            <input class="radio-input" type="radio" value="Жен" name="gender" id="female">Жен.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="text" placeholder="Дата рождения" data-toggle="datepicker" required>
+                        <div class="invalid-feedback">Введите дату рождения</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="text" placeholder="Город проживания" required>
+                        <div class="invalid-feedback">Введите город проживания</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control mask-phone" placeholder="Номер телефона" required>
+                        <div class="invalid-feedback">Введите номер телефона</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="email" placeholder="Номер телефона" required>
+                        <div class="invalid-feedback">Введите E-mail</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <button class="btn-lk btn-red w-100 px-0" type="submit"> <span class="gold">Сохранить данные</span></button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-40"> 
+                <div class="col">
+                  <div class="lk-form">
+                    <h3 class="gold">Данные для уплаты налогов:</h3>
+                    <h4 class="c-white">Первая страница паспорта</h4>
+                    <form class="row needs-validation" novalidate>
+                      <div class="col-sm-4 mb-24">
+                        <input class="form-control" type="number" placeholder="Серия" required>
+                        <div class="invalid-feedback">Введите cерию</div>
+                      </div>
+                      <div class="col-sm-4 mb-24">
+                        <input class="form-control" type="number" placeholder="Номер" required>
+                        <div class="invalid-feedback">Введите номер</div>
+                      </div>
+                      <div class="col-sm-4 mb-24">
+                        <input class="form-control" type="text" placeholder="Дата выдачи" data-toggle="datepicker" required>
+                        <div class="invalid-feedback">Введите дату выдачи</div>
+                      </div>
+                      <div class="col-sm-12 mb-32">
+                        <input class="form-control" type="text" placeholder="Кем выдан" required>
+                        <div class="invalid-feedback">Кто выдал паспорт?</div>
+                      </div>
+                      <div class="col-sm-12 mb-24">
+                        <h4 class="c-white">Адрес прописки</h4>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="text" placeholder="Населенный пункт" required>
+                        <div class="invalid-feedback">Введите населенный пункт</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="text" placeholder="Улица" required>
+                        <div class="invalid-feedback">Введите улицу</div>
+                      </div>
+                      <div class="col-sm-4 mb-24">
+                        <input class="form-control" type="number" placeholder="Номер " required>
+                        <div class="invalid-feedback">Введите номер дома</div>
+                      </div>
+                      <div class="col-sm-4 mb-24">
+                        <input class="form-control" type="number" placeholder="Номер строения" required>
+                        <div class="invalid-feedback">Введите номер строения</div>
+                      </div>
+                      <div class="col-sm-4 mb-24">
+                        <input class="form-control" type="number" placeholder="Номер квартиры" required>
+                        <div class="invalid-feedback">Введите номер квартиры</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <div class="upload-one"><input invalid-custom="inn-1" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                          <div class="file-subtitle">Фото паспорта лицевая сторона</div>
+                          <div class="invalid-feedback" invalid-customs="inn-1">Введите ИНН</div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <div class="upload-one"><input invalid-custom="inn-2" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                          <div class="file-subtitle">Фото паспорта, прописка</div>
+                          <div class="invalid-feedback" invalid-customs="inn-2">Введите ИНН</div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <input class="form-control" type="number" placeholder="ИНН" required>
+                        <div class="invalid-feedback">Введите ИНН</div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <div class="upload-one"><input invalid-custom="inn-3" id="inn" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                          <div class="invalid-feedback" invalid-customs="inn-3">Введите ИНН</div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 mb-24">
+                        <button class="btn-lk btn-red w-100 px-0" id="nalog" type="submit"> <span class="gold">Сохранить данные</span></button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container"> 
+          <div class="row"> 
+            <div class="col-sm-6 col-md-4"><a class="link-gold text-center text-sm-end" href="#">
+                 Полные правила акции </a></div>
+            <div class="col-sm-12 col-md-4 order-4 order-md-0 mt-30 mt-md-0">
+              <div class="social-icons"> <a href="#" target="_blank"><img src="img/icons/youtube.svg" alt="Youtube"/></a><a href="#" target="_blank"><img src="img/icons/vk.svg" alt="Youtube"/></a><a href="#" target="_blank"><img src="img/icons/odnoklassniki.svg" alt="Youtube"/></a></div>
+            </div>
+            <div class="col-sm-6 col-md-4"><a class="link-gold text-center text-sm-start" href="mailto:help@kupi-maheev.ru">
+                 help@kupi-maheev.ru </a></div>
+            <div class="col-12">
+              <div class="par-14 footer-dest">Общий срок проведения акции с 07 ноября 2023 года по 31 января 2024 года. Срок регистрации участников в акции, срок совершения покупок и регистрации чеков: с 07 ноября 2023 года по 08 января 2024 года. Акция проводится в розничных магазинах торговой сети «Монетка», продающих продукцию ТМ «МахеевЪ» на территории РФ. Правила акции, информацию об Организаторе акции, порядке и условиях её проведения можно узнать на сайте https://www.kupi-maheev.ru/. <br>Организатор акции – ООО «Ай-Экшн».</div>
+            </div>
+            <div class="col-12"> <a class="footer-link" href="#">Согласие на обработку персональных данных</a><a class="footer-link" href="#">Политика конфиденциальности</a></div>
+          </div>
+        </div>
+      </footer>
+      <div class="modal" id="modal-enter">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <div class="modal-title">Вход</div>
+              <form class="row needs-validation" novalidate>
+                <div class="col-12 mb-24">
+                  <input class="form-control mask-phone" placeholder="Номер телефона" required>
+                  <div class="invalid-feedback">Введите номер телефона</div>
+                </div>
+                <div class="col-12 mb-24">
+                  <input class="form-control" type="password" placeholder="Пароль" required>
+                  <div class="invalid-feedback">Введите пароль</div><a class="js-change-modal modal-link text-end w-100" href="#modal-recovery">Забыли пароль? </a>
+                </div>
+                <div class="col-12 mb-24">
+                  <button class="btn-lk btn-red w-100 px-0" type="submit"> <span class="gold">Войти в кабинет</span></button>
+                </div>
+              </form>
+              <div class="row">
+                <div class="col-12"> 
+                  <div class="par-16 text-center c-green-middle">Если Вы впервые на сайте, то Вам необходимо </div>
+                </div><a class="js-change-modal modal-link-lg text-center" href="#modal-reg"><span class="gold">Зарегистрироваться</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-reg">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <div class="modal-title modal-title-reg">Регистрация</div>
+              <form class="row needs-validation" novalidate>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control" type="text" placeholder="Фамилия" required>
+                  <div class="invalid-feedback">Введите фамилию</div>
+                </div>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control" type="text" placeholder="Имя" required>
+                  <div class="invalid-feedback">Введите имя</div>
+                </div>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control" type="text" placeholder="Отчество" required>
+                  <div class="invalid-feedback">Введите отчество</div>
+                </div>
+                <div class="col-sm-6 mb-xl-25">
+                  <div class="form-control-wrap mb-22 radio-wrap">
+                    <div class="text-label">Пол:</div>
+                    <label class="radio-label" for="male">
+                      <input class="radio-input" type="radio" value="Муж" checked name="gender" id="male">Муж.
+                    </label>
+                    <label class="radio-label" for="female">
+                      <input class="radio-input" type="radio" value="Жен" name="gender" id="female">Жен.
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control" type="text" placeholder="Дата рождения" data-toggle="datepicker" required>
+                  <div class="invalid-feedback">Введите дату рождения</div>
+                </div>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control" type="text" placeholder="Город проживания" required>
+                  <div class="invalid-feedback">Введите дату город проживания</div>
+                </div>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control mask-phone" placeholder="Номер телефона" required>
+                  <div class="invalid-feedback">Введите номер телефона</div>
+                </div>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control" type="email" placeholder="E-mail" required>
+                  <div class="invalid-feedback">Введите E-mail</div>
+                </div>
+                <div class="col-sm-12 mb-6">
+                  <label class="checkbox">
+                    <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text">Ознакомлен и согласен <a href="#" class="label-text">пользовательским соглашением </a> и <a href="#" class="label-text">политикой конфиденциальности</a></span>
+                    <div class="invalid-feedback">Подтвердите согласие с пользовательским соглашением и политикой конфиденциальности</div>
+                  </label>
+                </div>
+                <div class="col-sm-12 mb-6">
+                  <label class="checkbox">
+                    <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text">Ознакомлен и согласен с <a href="#" class="label-text">правилами акции </a> </span>
+                    <div class="invalid-feedback">Подтвердите согласие с правилами акции</div>
+                  </label>
+                </div>
+                <div class="col-sm-12 mb-6">
+                  <label class="checkbox">
+                    <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text">Даю свое согласие на обработку <a href="#" class="label-text">персональных данных </a> </span>
+                    <div class="invalid-feedback">Подтвердите согласие на обработку персональных данных</div>
+                  </label>
+                </div>
+                <div class="col-sm-12 mb-6">
+                  <label class="checkbox">
+                    <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text c-white">Мне уже есть 18 лет </span>
+                    <div class="invalid-feedback">Подтвердите возраст</div>
+                  </label>
+                </div>
+                <div class="col-12 col-sm-6 mt-24">
+                  <button class="btn-lk btn-red w-100 px-0" type="submit"> <span class="gold">Войти в кабинет</span></button>
+                </div>
+                <div class="col-12 col-sm-6"><a class="js-change-modal modal-link-lg text-center text-sm-start mt-16 mt-sm-32" href="#modal-enter"><span class="gold">Войти</span></a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-recovery">
+        <div class="modal-dialog modal modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <div class="modal-title-sm modal-title-reg">Восстановление пароля</div>
+              <form class="row needs-validation" novalidate>
+                <div class="col-12 mb-24">
+                  <input class="form-control mask-phone" placeholder="Номер телефона" required>
+                  <div class="invalid-feedback">Введите номер телефона</div>
+                </div>
+                <div class="col-12 mb-24">
+                  <button class="btn-lk btn-red w-100 px-0" type="submit"> <span class="gold">Восстановить пароль</span></button>
+                </div>
+              </form>
+              <div class="row">
+                <div class="col-12"> </div><a class="js-change-modal modal-link-lg text-center" href="#modal-reg"><span class="gold">Войти в кабинет</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="libs/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="libs/datepicker-bootstrap/js/datepicker.js"></script>
+    <script src="libs/datepicker-bootstrap/js/datepicker.ru-RU.js"></script>
+    <script src="libs/bootstrap-fileinput/js/locales/ru.js"></script>
+    <script src="libs/DataTables/datatables.min.js"></script>
+    <script src="libs/croppie/croppie.min.js"></script>
+    <script src="libs/jquery.maskedinput.min.js"></script>
+    <script src="libs/parallax/tweenmax.min.js"></script>
+    <script src="libs/parallax/jquery-parallax.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/fancybox/fancybox.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+</html>

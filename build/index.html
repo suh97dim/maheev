@@ -325,6 +325,138 @@
           </div>
         </div>
       </footer>
+      <div class="modal" id="modal-enter">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <div class="modal-title">Вход</div>
+              <form class="row needs-validation" novalidate>
+                <div class="col-12 mb-24">
+                  <input class="form-control mask-phone" placeholder="Номер телефона" required>
+                  <div class="invalid-feedback">Введите номер телефона</div>
+                </div>
+                <div class="col-12 mb-24">
+                  <input class="form-control" type="password" placeholder="Пароль" required>
+                  <div class="invalid-feedback">Введите пароль</div><a class="js-change-modal modal-link text-end w-100" href="#modal-recovery">Забыли пароль? </a>
+                </div>
+                <div class="col-12 mb-24">
+                  <button class="btn-lk btn-red w-100 px-0" type="submit"> <span class="gold">Войти в кабинет</span></button>
+                </div>
+              </form>
+              <div class="row">
+                <div class="col-12"> 
+                  <div class="par-16 text-center c-green-middle">Если Вы впервые на сайте, то Вам необходимо </div>
+                </div><a class="js-change-modal modal-link-lg text-center" href="#modal-reg"><span class="gold">Зарегистрироваться</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-reg">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <div class="modal-title modal-title-reg">Регистрация</div>
+              <form class="row needs-validation" novalidate>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control" type="text" placeholder="Фамилия" required>
+                  <div class="invalid-feedback">Введите фамилию</div>
+                </div>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control" type="text" placeholder="Имя" required>
+                  <div class="invalid-feedback">Введите имя</div>
+                </div>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control" type="text" placeholder="Отчество" required>
+                  <div class="invalid-feedback">Введите отчество</div>
+                </div>
+                <div class="col-sm-6 mb-xl-25">
+                  <div class="form-control-wrap mb-22 radio-wrap">
+                    <div class="text-label">Пол:</div>
+                    <label class="radio-label" for="male">
+                      <input class="radio-input" type="radio" value="Муж" checked name="gender" id="male">Муж.
+                    </label>
+                    <label class="radio-label" for="female">
+                      <input class="radio-input" type="radio" value="Жен" name="gender" id="female">Жен.
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control" type="text" placeholder="Дата рождения" data-toggle="datepicker" required>
+                  <div class="invalid-feedback">Введите дату рождения</div>
+                </div>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control" type="text" placeholder="Город проживания" required>
+                  <div class="invalid-feedback">Введите дату город проживания</div>
+                </div>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control mask-phone" placeholder="Номер телефона" required>
+                  <div class="invalid-feedback">Введите номер телефона</div>
+                </div>
+                <div class="col-sm-6 mb-24">
+                  <input class="form-control" type="email" placeholder="E-mail" required>
+                  <div class="invalid-feedback">Введите E-mail</div>
+                </div>
+                <div class="col-sm-12 mb-6">
+                  <label class="checkbox">
+                    <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text">Ознакомлен и согласен <a href="#" class="label-text">пользовательским соглашением </a> и <a href="#" class="label-text">политикой конфиденциальности</a></span>
+                    <div class="invalid-feedback">Подтвердите согласие с пользовательским соглашением и политикой конфиденциальности</div>
+                  </label>
+                </div>
+                <div class="col-sm-12 mb-6">
+                  <label class="checkbox">
+                    <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text">Ознакомлен и согласен с <a href="#" class="label-text">правилами акции </a> </span>
+                    <div class="invalid-feedback">Подтвердите согласие с правилами акции</div>
+                  </label>
+                </div>
+                <div class="col-sm-12 mb-6">
+                  <label class="checkbox">
+                    <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text">Даю свое согласие на обработку <a href="#" class="label-text">персональных данных </a> </span>
+                    <div class="invalid-feedback">Подтвердите согласие на обработку персональных данных</div>
+                  </label>
+                </div>
+                <div class="col-sm-12 mb-6">
+                  <label class="checkbox">
+                    <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text c-white">Мне уже есть 18 лет </span>
+                    <div class="invalid-feedback">Подтвердите возраст</div>
+                  </label>
+                </div>
+                <div class="col-12 col-sm-6 mt-24">
+                  <button class="btn-lk btn-red w-100 px-0" type="submit"> <span class="gold">Войти в кабинет</span></button>
+                </div>
+                <div class="col-12 col-sm-6"><a class="js-change-modal modal-link-lg text-center text-sm-start mt-16 mt-sm-32" href="#modal-enter"><span class="gold">Войти</span></a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-recovery">
+        <div class="modal-dialog modal modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <div class="modal-title-sm modal-title-reg">Восстановление пароля</div>
+              <form class="row needs-validation" novalidate>
+                <div class="col-12 mb-24">
+                  <input class="form-control mask-phone" placeholder="Номер телефона" required>
+                  <div class="invalid-feedback">Введите номер телефона</div>
+                </div>
+                <div class="col-12 mb-24">
+                  <button class="btn-lk btn-red w-100 px-0" type="submit"> <span class="gold">Восстановить пароль</span></button>
+                </div>
+              </form>
+              <div class="row">
+                <div class="col-12"> </div><a class="js-change-modal modal-link-lg text-center" href="#modal-reg"><span class="gold">Войти в кабинет</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>

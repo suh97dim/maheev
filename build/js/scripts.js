@@ -1,4 +1,5 @@
 $(function () {
+
   // bootstrap-fileinput
   if ($(".bootstrap-file-upload").length > 0) {
     $(".bootstrap-file-upload").fileinput({
@@ -80,21 +81,50 @@ $(function () {
     language: "ru-RU",
     format: "dd.mm.yyyy",
   });
-  // Скрываем поля адреса если он совпадает с пропиской
-  $('.js-address').change(function () {
-    if ($(this).is(':checked')) {
-      $('#address').addClass('d-n')
-      $('#address').prev().addClass('mb-xl-20')
-    } else {
-      $('#address').removeClass('d-n')
-      $('#address').prev().removeClass('mb-xl-20')
+
+
+  $('#upload-image ').click(function (e) {
+    var file = document.getElementById('file-receipt').files[0];
+    var reader = new FileReader();
+    let path
+    reader.onload = function (e) {
+      var basic = $('#img-crop').croppie({
+        viewport: { width: 400, height: 400 },
+        boundary: { width: 500, height: 400 },
+        showZoomer: true,
+        mouseWheelZoom: 'ctrl'
+      });
+      basic.croppie('bind', {
+        url: e.target.result,
+        points: [77, 469, 280, 739]
+      });
+      basic.croppie('result', 'html').then(function (html) {
+      });;
     }
-  });
+    reader.readAsDataURL(file);
+  })
+
+  $('#nalog').click(function (e) {
+    $('.file').each(function () {
+      if ($(this).val() == '') {
+        let a = ($(this).attr('invalid-custom'))
+        let b = $("div").find("[invalid-customs='" + a + "']");
+        $(b).css('display', 'block');
+      } else {
+        let a = ($(this).attr('invalid-custom'))
+        let b = $("div").find("[invalid-customs='" + a + "']");
+        $(b).css('display', 'none');
+      }
+    });
+  })
+
+
+
 
   $(function () {
     $('.to-data-tab').click(function (e) {
       e.preventDefault();
-      $('a[href="#tab-5"]').tab('show');
+      $('a[href="#tab-4"]').tab('show');
     })
   });
 
@@ -109,4 +139,26 @@ $(function () {
       0
     );
   });
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 })
+
+
+
+
+
+var forms = document.querySelectorAll('.needs-validation')
+
+
+Array.prototype.slice.call(forms)
+  .forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })

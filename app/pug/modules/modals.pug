@@ -88,3 +88,22 @@
                     .col-12.col-sm-6
                         a(href="#modal-enter").js-change-modal.modal-link-lg.text-center.text-sm-start.mt-16.mt-sm-32
                             span.gold Войти
+
+.modal#modal-recovery
+    .modal-dialog.modal.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                .modal-title-sm.modal-title-reg Восстановление пароля
+                form.row.needs-validation(novalidate)
+                    .col-12.mb-24
+                        input( placeholder="Номер телефона" required ).form-control.mask-phone
+                        .invalid-feedback Введите номер телефона
+                    .col-12.mb-24
+                        button.btn-lk.btn-red.w-100.px-0(type="submit") 
+                            span.gold Восстановить пароль
+                .row
+                    .col-12 
+                    a(href="#modal-reg").js-change-modal.modal-link-lg.text-center
+                        span.gold Войти в кабинет
