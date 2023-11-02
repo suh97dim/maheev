@@ -71,12 +71,12 @@
                 </div>
               </div>
               <div class="row" id="step-1">
-                <div class="col-6"> 
+                <div class="col-12 col-md-5 col-lg-6">
                   <label class="upload-photo" for="file-receipt"> <img src="img/icons/upload-receipt.svg"/>Загрузить фото чека
                   </label>
                   <input id="file-receipt" type="file" accept="image/*">
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-7 col-lg-6 mt-24 mt-md-0"> 
                   <h5 class="gold">К регистрации в Акции принимаются чеки, если:</h5>
                   <ul>
                     <li class="li-lk">фото чека качественное, чек сфотографирован полностью, не стоит загружать фотографию только QR кода</li>
@@ -92,32 +92,151 @@
                 <div class="col-12 d-flex justify-content-center"> 
                   <div id="img-crop"></div>
                 </div>
-                <div class="row">
-                  <div class="col-4"></div>
-                  <div class="col-4 mt-20"> 
-                    <button class="btn-lk btn-red mx-a w-100" id="other-photo"><span class="gold">Другое фото</span></button>
+                <div class="col"> 
+                  <div class="row">
+                    <div class="col-md-12 col-lg-3"></div>
+                    <div class="col-md-6 col-lg-3 mt-20"> 
+                      <button class="btn-lk btn-red mx-a w-100" id="other-photo"><span class="gold">Другое фото</span></button>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mt-20"> 
+                      <button class="btn-lk btn-white mx-a w-100">Регистрация чека</button>
+                    </div>
+                    <div class="col-md-12 col-lg-3"></div>
                   </div>
-                  <div class="col-4"></div>
                 </div>
-                <div class="row"> 
-                  <div class="col-12 mt-60"> 
-                    <h5 class="gold text-center">Если QR-код не распознается и фискальные признаки не считываются, то введите данные вручную.</h5>
-                    <div class="d-flex justify-content-center"><a class="fiskal-link mx-a" type="button" data-bs-toggle="modal" data-bs-target="#modal-fiskal">Где найти фискальные данные на чеке?</a></div>
+                <div class="col-12 mt-60"> 
+                  <h5 class="gold text-center">Если QR-код не распознается и фискальные признаки не считываются, то введите данные вручную.</h5>
+                  <div class="d-flex justify-content-center"><a class="fiskal-link mx-a" type="button" data-bs-toggle="modal" data-bs-target="#modal-fiskal">Где найти фискальные данные на чеке?</a></div>
+                </div>
+                <div class="col">
+                  <form class="row needs-validation px-0 px-lg-80 mt-40" novalidate>
+                    <div class="col-sm-6 col-md-4 mb-24">
+                      <input class="form-control" type="text" placeholder="ФН" required>
+                      <div class="invalid-feedback">Укажите ФН</div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-24">
+                      <input class="form-control" type="text" placeholder="ФД" required>
+                      <div class="invalid-feedback">Укажите ФД</div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-24">
+                      <input class="form-control" type="text" placeholder="ФПД" required>
+                      <div class="invalid-feedback">Укажите ФПД</div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-24">
+                      <input class="form-control" type="text" placeholder="Сумма покупки" required>
+                      <div class="invalid-feedback">Укажите сумма покупки</div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-24">
+                      <input class="form-control" type="text" placeholder="Дата покупки" required>
+                      <div class="invalid-feedback">Укажите дату покупки</div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-24">
+                      <input class="form-control" type="text" placeholder="Время покупки" required>
+                      <div class="invalid-feedback">Укажите время покупки</div>
+                    </div>
+                    <div class="col-md-4"> </div>
+                    <div class="col-md-4 mb-24">
+                      <button class="btn-lk btn-red w-100 px-0" id="nalog" type="submit"> <span class="gold">Сохранить данные</span></button>
+                    </div>
+                    <div class="col-md-4"></div>
+                  </form>
+                </div>
+              </div>
+              <div class="row mt-30 mt-md-70"> 
+                <div class="col-12"> 
+                  <div class="lk-tab-title text-center">Зарегистрированные чеки</div>
+                </div>
+              </div>
+              <div class="row"> 
+                <div class="col-12"> 
+                  <div class="receved-code-table__wrapper">
+                    <table class="receved-code-table" id="registered-receipts">
+                      <thead>
+                        <tr>
+                          <th class="nowrap date-appl">Дата розыгрыша</th>
+                          <th class="nowrap num-appl">Номер чека</th>
+                          <th class="nowrap date-event">ФН, ФД, ФПД</th>
+                          <th class="nowrap type-event">Фото чека</th>
+                          <th class="status-event">Статус</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_wait">В процессе</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_proof">Подтвержден</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_canceled">Отклонено</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_wait">В процессе</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_wait">В процессе</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_wait">В процессе</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_wait">В процессе</div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
-                <form class="row needs-validation mx-100 mt-40" novalidate>
-                  <div class="col-sm-4 mb-24">
-                    <input class="form-control" type="number" placeholder="Серия" required>
-                    <div class="invalid-feedback">Введите cерию</div>
+              </div>
+              <div class="row"> 
+                <div class="col"> 
+                  <div class="my-receipt-footer"><img src="img/lk-footer.svg"/><span>
+                      <div class="par-16">Чеки не суммируются, т.е. если в одном чеке акционной продукции менее, чем на 300 руб. он не будет участвовать в формировании заявок</div>
+                      <div class="par-16">Заявка формируется в момент подтверждения чека Организатором.</div>
+                      <div class="par-16">Каждая заявка участвует в розыгрыше каждого вида Приза до момента выигрыша или выхода за период сбора заявок на розыгрыш.</div></span>
                   </div>
-                  <div class="col-sm-4 mb-24">
-                    <input class="form-control" type="number" placeholder="Номер" required>
-                    <div class="invalid-feedback">Введите номер</div>
-                  </div>
-                  <div class="col-sm-6 mb-24">
-                    <button class="btn-lk btn-red w-100 px-0" id="nalog" type="submit"> <span class="gold">Сохранить данные</span></button>
-                  </div>
-                </form>
+                </div>
               </div>
             </div>
             <div class="tab-pane fade lk-content" id="tab-2">
@@ -425,9 +544,7 @@
                         <input class="form-control" type="text" placeholder="Кем выдан" required>
                         <div class="invalid-feedback">Кто выдал паспорт?</div>
                       </div>
-                      <div class="col-sm-12 mb-24">
-                        <h4 class="c-white">Адрес прописки</h4>
-                      </div>
+                      <h4 class="c-white">Адрес прописки</h4>
                       <div class="col-sm-6 mb-24">
                         <input class="form-control" type="text" placeholder="Населенный пункт" required>
                         <div class="invalid-feedback">Введите населенный пункт</div>

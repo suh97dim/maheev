@@ -149,7 +149,22 @@ li.li-lk
 #upload-image
     width: 200px
     margin: 0 auto
+.my-receipt-footer
+    border-radius: 24px
+    border: 1px solid #046221
+    background: linear-gradient(180deg, #013D14 0%, #023010 100%)
+    box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.25)
+    padding: 60px
+    display: flex
+    justify-content: center
+    flex-direction: column
+    margin-top: 70px
+    gap: 30px
+    .par-16
+        color: #689878
+        margin-bottom: 8px
 
+    
 #step-2
     opacity: 0
     display: none
@@ -165,6 +180,8 @@ li.li-lk
     tbody
         tr
             border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+        a
+            color: $white
 .status
     background-size: 16px
     font-weight: 500
@@ -181,6 +198,9 @@ li.li-lk
 .status_success
     color: #90F9B1
     background-image: url(../img/icons/win.svg)
+.status_proof
+    color: #90F9B1
+    background-image: url(../img/icons/proof.svg)
 
 @media screen and (max-width: 1100px)
     .lk-content
@@ -203,6 +223,19 @@ li.li-lk
             margin: 0 auto
             display: block
             padding-bottom: 45px
+    .upload-photo
+        padding-top: 80px
+        padding-bottom: 80px
+        height: auto
+    .upload-photo
+        padding-top: 50px
+        padding-bottom: 50px
+        height: auto
+        font-size: 24px
+        gap: 30px
+        img
+            width: 70px
+            
 @media screen and (max-width: 900px)
     .lk-prize
         flex-direction: column
@@ -216,6 +249,8 @@ li.li-lk
         tbody
             td
                 padding: 19px 0
+
+        
 
 @media screen and (max-width: 768px)
     .main-prize-lk
@@ -250,6 +285,11 @@ li.li-lk
         tbody
             td
                 font-size: 16px
+    .upload-photo
+        padding-top: 50px
+        padding-bottom: 50px
+        height: auto
+        font-size: 24px
 @media screen and (max-width: 575px)
     .lk-content
         padding: 30px 15px
@@ -273,3 +313,6 @@ li.li-lk
         gap: 25px
         img
             width: 40px
+    .my-receipt-footer
+        padding: 30px
+        margin-top: 30px

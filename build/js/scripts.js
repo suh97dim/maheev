@@ -1,6 +1,4 @@
 $(function () {
-
-  // bootstrap-fileinput
   if ($(".bootstrap-file-upload").length > 0) {
     $(".bootstrap-file-upload").fileinput({
       uploadUrl: "#",
@@ -20,9 +18,8 @@ $(function () {
   // маска для номера телефона
   $(".mask-phone").mask("+7 (999) 999-99-99");
   $.fn.DataTable.ext.pager.numbers_length = 5;
-  var oTable = $('#winners').DataTable({ ordering: false, bLengthChange: false, info: false, pageLength: 6, pagingType: "numbers" });
-
-  $('#codes,#appl').DataTable({ ordering: false, bLengthChange: false, info: false, pageLength: 6, pagingType: "numbers" });
+  var oTable = $('#winners').DataTable({ordering: false, bLengthChange: false, info: false, pageLength: 6, pagingType: "numbers"});
+  $('#registered-receipts,#appl').DataTable({ ordering: false, bLengthChange: false, info: false, pageLength: 6, pagingType: "numbers" });
 
   $(".qa-title").click(function () {
     if ($('.qa-title').is(':visible')) {
@@ -60,10 +57,7 @@ $(function () {
   }).blur(function () {
     $(this).parent().removeClass('focus');
   });
-  // setTimeout(() => {
-  //   $("#modal-confirmation").modal("show");
-  // }, 1000);
-  // scroll to id
+
   $(".js-change-modal").on("click", function (e) {
     e.preventDefault();
     $(".modal").modal("hide");
@@ -83,14 +77,16 @@ $(function () {
   });
 
 
+//загрузка фото и инициализация croppier,
   $('#file-receipt ').on('input', function (e) {
+    //инициализация с display none не проходит
     $('#step-2').css({ display: 'block' })
     var file = document.getElementById('file-receipt').files[0];
     var reader = new FileReader();
     reader.onload = function (e) {
       var basic = $('#img-crop').croppie({
-        viewport: { width: 400, height: 400 },
-        boundary: { width: 500, height: 400 },
+        viewport: { width: 550, height: 300 },
+        boundary: { width: 570, height: 320 },
         showZoomer: true,
         mouseWheelZoom: 'ctrl'
       });
@@ -98,20 +94,20 @@ $(function () {
         url: e.target.result,
 
       });
-      basic.croppie('result', 'html').then(function (html) {
-      });;
+      // basic.croppie('result', 'html').then(function (html) {
+      // });;
 
     }
+    //
     reader.readAsDataURL(file);
     $('#step-1').fadeOut('slow');
     setTimeout(function () {
-   
       $('#step-2').animate({ opacity: 1 })
     }, 1000);
   })
 
 
-
+//удаляем сстарое фото и скрываем блок
   $('#other-photo').click(function (e) {
     $('#img-crop').croppie('destroy');
     $('#step-1').fadeIn('fast');
@@ -120,6 +116,7 @@ $(function () {
     $("#fileInputId").val(null);
   })
 
+// валидация формы type = file, из-за вложенности подсказка не появлялась
   $('#nalog').click(function (e) {
     $('.file').each(function () {
       if ($(this).val() == '') {
@@ -136,7 +133,7 @@ $(function () {
 
 
 
-
+// scroll button to tab 4
   $(function () {
     $('.to-data-tab').click(function (e) {
       e.preventDefault();
@@ -144,6 +141,7 @@ $(function () {
     })
   });
 
+  
   // scroll to id
   $(".js-scroll-to").on("click", function (e) {
     e.preventDefault();
@@ -165,8 +163,6 @@ $(function () {
 
 
 var forms = document.querySelectorAll('.needs-validation')
-
-
 Array.prototype.slice.call(forms)
   .forEach(function (form) {
     form.addEventListener('submit', function (event) {
@@ -174,7 +170,6 @@ Array.prototype.slice.call(forms)
         event.preventDefault()
         event.stopPropagation()
       }
-
       form.classList.add('was-validated')
     }, false)
   })
