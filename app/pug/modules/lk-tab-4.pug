@@ -28,12 +28,12 @@
                     .invalid-feedback Введите дату рождения
                 .col-sm-6.mb-24
                     input(type="text" placeholder="Город проживания" required value="Москва").form-control
-                    .invalid-feedback Введите дату город проживания
+                    .invalid-feedback Введите город проживания
                 .col-sm-6.mb-24
                     input( placeholder="Номер телефона" required value="88805553535").form-control.mask-phone
                     .invalid-feedback Введите номер телефона
                 .col-sm-6.mb-24
-                    input(type="email" placeholder="Номер телефона" required value="user@mail.ru").form-control
+                    input(type="email" placeholder="E-mail" required value="user@mail.ru").form-control
                     .invalid-feedback Введите E-mail
                 .col-sm-6.mb-24
                     button.btn-lk.btn-red.w-100.px-0(type="submit") 
@@ -77,7 +77,7 @@
                     input( placeholder="Номер телефона" required ).form-control.mask-phone
                     .invalid-feedback Введите номер телефона
                 .col-sm-6.mb-24
-                    input(type="email" placeholder="Номер телефона" required ).form-control
+                    input(type="email" placeholder="E-mail" required ).form-control
                     .invalid-feedback Введите E-mail
                 .col-sm-6.mb-24
                     button.btn-lk.btn-red.w-100.px-0(type="submit") 
@@ -119,21 +119,21 @@
                     .invalid-feedback Введите номер квартиры
                 .col-sm-6.mb-24
                     .upload-one
-                        <input invalid-custom="inn-1" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                        <input invalid-custom="file-1" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
                         .file-subtitle Фото паспорта лицевая сторона
-                        .invalid-feedback(invalid-customs="inn-1") Введите ИНН
+                        .invalid-feedback(invalid-customs="file-1") Загрузите фото
                 .col-sm-6.mb-24
                     .upload-one
-                        <input invalid-custom="inn-2" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                        <input invalid-custom="file-2" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
                         .file-subtitle Фото паспорта, прописка
-                        .invalid-feedback(invalid-customs="inn-2") Введите ИНН
+                        .invalid-feedback(invalid-customs="file-2") Загрузите фото
                 .col-sm-6.mb-24
                     input(type="number" placeholder="ИНН" required).form-control
                     .invalid-feedback Введите ИНН
                 .col-sm-6.mb-24
                     .upload-one
-                        <input invalid-custom="inn-3" id="inn" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
-                        .invalid-feedback(invalid-customs="inn-3") Введите ИНН
+                        <input invalid-custom="file-3"  class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                        .invalid-feedback(invalid-customs="file-3") Загрузите фото
                 .col-sm-6.mb-24
                     button.btn-lk.btn-red.w-100.px-0#nalog(type="submit") 
                         span.gold Сохранить данные

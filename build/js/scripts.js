@@ -95,7 +95,7 @@ $(function () {
       });
       basic.croppie('bind', {
         url: e.target.result,
-        points: [77,469,280,739]
+        points: [77, 469, 280, 739]
       });
       basic.croppie('result', 'html').then(function (html) {
       });;
