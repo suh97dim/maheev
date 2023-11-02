@@ -47,7 +47,7 @@
             span
                 h5.gold Телевизор Яндекс <br> с Алисой 43” 
                 .par-16.c-white Может стать твоим!
-                span.d-inline-block( data-toggle="tooltip" title="Заполните запрашиваемые поля во вкладке «Мои данные». Только после получения необходимой информации мы сможем вручить Вам приз" data-placement="left" )
+                span.d-inline-block
                     a.to-data-tab.btn-sm.gold-bg.mt-20( type="button")  Заполнить данные
     .col-12.col-sm-6.mt-12.mt-sm-24
         .lk-prize.prize-blocked 
@@ -61,6 +61,10 @@
     .col-12
         .main-prize-lk
             h4.gold.text-center «Сертификат» на
-            span.d-inline-block.main-prize-btn( data-toggle="tooltip" title="Заполните запрашиваемые поля во вкладке «Мои данные». Только после получения необходимой информации мы сможем вручить Вам приз" data-placement="left" )
+            span.d-inline-block.main-prize-btn
                 a.to-data-tab.btn-sm.gold-bg.mt-20( type="button")  Заполнить данные
+            +img('main-prize-main.png','','')
+    .col-12
+        .main-prize-lk.prize-blocked 
+            h4.gold.text-center «Сертификат» на
             +img('main-prize-main.png','','')

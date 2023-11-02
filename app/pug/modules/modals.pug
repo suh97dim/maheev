@@ -90,12 +90,12 @@
                             span.gold Войти
 
 .modal#modal-recovery
-    .modal-dialog.modal.modal-dialog-centered
+    .modal-dialog.modal-dialog-centered
         .modal-content
             .modal-body
                 button(type="button" data-bs-dismiss="modal" aria-label="Close").close
                     +img('icons/close.svg', 'close-ic')
-                .modal-title-sm.modal-title-reg Восстановление пароля
+                .modal-title-sm Восстановление пароля
                 form.row.needs-validation(novalidate)
                     .col-12.mb-24
                         input( placeholder="Номер телефона" required ).form-control.mask-phone
@@ -107,3 +107,34 @@
                     .col-12 
                     a(href="#modal-reg").js-change-modal.modal-link-lg.text-center
                         span.gold Войти в кабинет
+
+.modal#modal-success-reg
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                h4.text-center
+                    span.gold Вы зарегистрировались <br> в акции!
+                .row.mt-12
+                    .col-12 
+                        .par-16.text-center.c-green-middle.fw-bolder На указанный вами телефон (79008987676) отправлен пароль для доступа в личный кабинет
+                .row.mt-24
+                    .col-12 
+                        button.btn-lk.btn-red.w-100.px-0(href="#modal-enter" type="button").js-change-modal.modal-link-lg.text-center
+                            span.gold Войти в кабинет
+
+.modal#modal-thanks
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                .modal-title Спасибо!
+                .row.mt-12
+                    .col-12 
+                        .par-16.text-center.c-green-middle.fw-bolder На указанный номер телефона отправлен новый пароль
+                .row.mt-24
+                    .col-12 
+                        button.btn-lk.btn-red.w-100.px-0(href="#modal-enter" type="button").js-change-modal.modal-link-lg.text-center
+                            span.gold Войти в кабинет

@@ -38,7 +38,8 @@
                 <li class="nav-item"><a class="nav-link-header" href="#faq">Вопросы и ответы</a></li>
               </ul>
             </div>
-            <div class="col-auto"><a class="link-gold" type="button" data-bs-toggle="modal" data-bs-target="#modal-enter"><img class="mr-10" src="img/icons/user.svg" alt="Войти"/><span class="d-none d-md-inline">Личный кабинет</span></a></div>
+            <div class="col-auto"><a class="link-gold" type="button" data-bs-toggle="modal" data-bs-target="#modal-enter"><img class="mr-10" src="img/icons/user.svg" alt="Войти"/><span class="d-none d-md-inline">Личный кабинет</span></a>
+            </div>
           </div>
         </div>
       </header>
@@ -435,12 +436,12 @@
         </div>
       </div>
       <div class="modal" id="modal-recovery">
-        <div class="modal-dialog modal modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body">
               <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
               </button>
-              <div class="modal-title-sm modal-title-reg">Восстановление пароля</div>
+              <div class="modal-title-sm">Восстановление пароля</div>
               <form class="row needs-validation" novalidate>
                 <div class="col-12 mb-24">
                   <input class="form-control mask-phone" placeholder="Номер телефона" required>
@@ -452,6 +453,48 @@
               </form>
               <div class="row">
                 <div class="col-12"> </div><a class="js-change-modal modal-link-lg text-center" href="#modal-reg"><span class="gold">Войти в кабинет</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-success-reg">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <h4 class="text-center"><span class="gold">Вы зарегистрировались <br> в акции!</span></h4>
+              <div class="row mt-12">
+                <div class="col-12"> 
+                  <div class="par-16 text-center c-green-middle fw-bolder">На указанный вами телефон (79008987676) отправлен пароль для доступа в личный кабинет</div>
+                </div>
+              </div>
+              <div class="row mt-24">
+                <div class="col-12"> 
+                  <button class="btn-lk btn-red w-100 px-0 js-change-modal modal-link-lg text-center" href="#modal-enter" type="button"><span class="gold">Войти в кабинет</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-thanks">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <div class="modal-title">Спасибо!</div>
+              <div class="row mt-12">
+                <div class="col-12"> 
+                  <div class="par-16 text-center c-green-middle fw-bolder">На указанный номер телефона отправлен новый пароль</div>
+                </div>
+              </div>
+              <div class="row mt-24">
+                <div class="col-12"> 
+                  <button class="btn-lk btn-red w-100 px-0 js-change-modal modal-link-lg text-center" href="#modal-enter" type="button"><span class="gold">Войти в кабинет</span></button>
+                </div>
               </div>
             </div>
           </div>

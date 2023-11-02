@@ -83,10 +83,9 @@ $(function () {
   });
 
 
-  $('#upload-image ').click(function (e) {
+  $('#file-receipt ').on('input', function (e) {
     var file = document.getElementById('file-receipt').files[0];
     var reader = new FileReader();
-    let path
     reader.onload = function (e) {
       var basic = $('#img-crop').croppie({
         viewport: { width: 400, height: 400 },
@@ -96,12 +95,16 @@ $(function () {
       });
       basic.croppie('bind', {
         url: e.target.result,
-        points: [77, 469, 280, 739]
+        points: [77,469,280,739]
       });
       basic.croppie('result', 'html').then(function (html) {
       });;
+
     }
     reader.readAsDataURL(file);
+    $('#step-1').fadeOut('fast', function () {
+      $('#step-2').fadeIn('slow');
+    });
   })
 
   $('#nalog').click(function (e) {

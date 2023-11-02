@@ -33,12 +33,13 @@
             <div class="col-auto page-header-menu collapse">
               <ul class="nav nav-header">
                 <li class="nav-item"><a class="nav-link-header" href="">Правила</a></li>
-                <li class="nav-item"><a class="nav-link-header mt-100" href="#prizes">Призы</a></li>
-                <li class="nav-item"><a class="nav-link-header" href="#winner">Победители</a></li>
-                <li class="nav-item"><a class="nav-link-header" href="#faq">Вопросы и ответы</a></li>
+                <li class="nav-item"><a class="nav-link-header mt-100" href="/index.html#prizes">Призы</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="/index.html#winner">Победители</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="/index.html#faq">Вопросы и ответы</a></li>
               </ul>
             </div>
-            <div class="col-auto"><a class="link-gold" type="button" data-bs-toggle="modal" data-bs-target="#modal-enter"><img class="mr-10" src="img/icons/user.svg" alt="Войти"/><span class="d-none d-md-inline">Личный кабинет</span></a></div>
+            <div class="col-auto"><a class="link-gold" type="button"><img class="mr-10" src="img/icons/logout.svg" alt="Войти"/><span class="d-none d-md-inline">Выйти</span></a>
+            </div>
           </div>
         </div>
       </header>
@@ -68,6 +69,8 @@
                     <div class="lk-step-box">Шаг 1. Загрузите фото</div>
                   </div>
                 </div>
+              </div>
+              <div class="row" id="step-1">
                 <div class="col-6"> 
                   <label class="upload-photo" for="file-receipt"> <img src="img/icons/upload-receipt.svg"/>Загрузить фото чека
                   </label>
@@ -87,7 +90,9 @@
                 <div class="col-12 mt-40"> 
                   <button class="btn-lk btn-red" id="upload-image" type="submit"> <span class="gold">Далее</span></button>
                 </div>
-                <div class="col-6"> 
+              </div>
+              <div class="row" id="step-2">
+                <div class="col-12 d-flex justify-content-center"> 
                   <div id="img-crop"></div>
                 </div>
               </div>
@@ -252,7 +257,7 @@
                 <div class="col-12 col-sm-6 mt-12 mt-sm-0">
                   <div class="lk-prize"><img src="img/lk-prizes/tv.webp" alt="Телевизор"/><span>
                       <h5 class="gold">Телевизор Яндекс <br> с Алисой 43” </h5>
-                      <div class="par-16 c-white">Может стать твоим!</div><span class="d-inline-block" data-toggle="tooltip" title="Заполните запрашиваемые поля во вкладке «Мои данные». Только после получения необходимой информации мы сможем вручить Вам приз" data-placement="left"><a class="to-data-tab btn-sm gold-bg mt-20" type="button"> Заполнить данные</a></span></span>
+                      <div class="par-16 c-white">Может стать твоим!</div><span class="d-inline-block"><a class="to-data-tab btn-sm gold-bg mt-20" type="button"> Заполнить данные</a></span></span>
                   </div>
                 </div>
                 <div class="col-12 col-sm-6 mt-12 mt-sm-24">
@@ -268,7 +273,12 @@
                 </div>
                 <div class="col-12">
                   <div class="main-prize-lk">
-                    <h4 class="gold text-center">«Сертификат» на</h4><span class="d-inline-block main-prize-btn" data-toggle="tooltip" title="Заполните запрашиваемые поля во вкладке «Мои данные». Только после получения необходимой информации мы сможем вручить Вам приз" data-placement="left"><a class="to-data-tab btn-sm gold-bg mt-20" type="button"> Заполнить данные</a></span><img src="img/main-prize-main.webp" alt=""/>
+                    <h4 class="gold text-center">«Сертификат» на</h4><span class="d-inline-block main-prize-btn"><a class="to-data-tab btn-sm gold-bg mt-20" type="button"> Заполнить данные</a></span><img src="img/main-prize-main.webp" alt=""/>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="main-prize-lk prize-blocked"> 
+                    <h4 class="gold text-center">«Сертификат» на</h4><img src="img/main-prize-main.webp" alt=""/>
                   </div>
                 </div>
               </div>
@@ -333,7 +343,7 @@
                 <div class="col">
                   <div class="lk-tab-title text-center">Персональные данные</div>
                   <div class="lk-attention"><img src="img/icons/attention.svg"/>
-                    <div class="par-16">Персональные данные требуются в соответствии законом для уплаты налогов при получении призов на общую сумму свыше 4000 рублей. Налог оплачивает Организатор. Если общая сумма призов составляет меньше 4000 рублей — добавлять персональные данные не обязательно. Для получения призов на сумму более 4000 рублей предоставление персональных данных является обязательным. </div>
+                    <div class="par-16">Персональные данные требуются в соответствии законом для уплаты налогов при получении призов на общую <strong> сумму свыше 4000 рублей</strong>. Налог оплачивает Организатор. Если общая сумма призов составляет меньше 4000 рублей — добавлять персональные данные не обязательно. Для получения призов на сумму более 4000 рублей предоставление персональных данных является обязательным. </div>
                   </div>
                 </div>
               </div>
@@ -592,12 +602,12 @@
         </div>
       </div>
       <div class="modal" id="modal-recovery">
-        <div class="modal-dialog modal modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body">
               <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
               </button>
-              <div class="modal-title-sm modal-title-reg">Восстановление пароля</div>
+              <div class="modal-title-sm">Восстановление пароля</div>
               <form class="row needs-validation" novalidate>
                 <div class="col-12 mb-24">
                   <input class="form-control mask-phone" placeholder="Номер телефона" required>
@@ -609,6 +619,48 @@
               </form>
               <div class="row">
                 <div class="col-12"> </div><a class="js-change-modal modal-link-lg text-center" href="#modal-reg"><span class="gold">Войти в кабинет</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-success-reg">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <h4 class="text-center"><span class="gold">Вы зарегистрировались <br> в акции!</span></h4>
+              <div class="row mt-12">
+                <div class="col-12"> 
+                  <div class="par-16 text-center c-green-middle fw-bolder">На указанный вами телефон (79008987676) отправлен пароль для доступа в личный кабинет</div>
+                </div>
+              </div>
+              <div class="row mt-24">
+                <div class="col-12"> 
+                  <button class="btn-lk btn-red w-100 px-0 js-change-modal modal-link-lg text-center" href="#modal-enter" type="button"><span class="gold">Войти в кабинет</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-thanks">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <div class="modal-title">Спасибо!</div>
+              <div class="row mt-12">
+                <div class="col-12"> 
+                  <div class="par-16 text-center c-green-middle fw-bolder">На указанный номер телефона отправлен новый пароль</div>
+                </div>
+              </div>
+              <div class="row mt-24">
+                <div class="col-12"> 
+                  <button class="btn-lk btn-red w-100 px-0 js-change-modal modal-link-lg text-center" href="#modal-enter" type="button"><span class="gold">Войти в кабинет</span></button>
+                </div>
               </div>
             </div>
           </div>

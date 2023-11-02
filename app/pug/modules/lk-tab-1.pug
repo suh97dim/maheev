@@ -5,6 +5,7 @@
     .col-12.gold.text-center.mb-40
         .lk-step 
             .lk-step-box Шаг 1. Загрузите фото
+.row#step-1
     .col-6 
         label.upload-photo(for="file-receipt") 
             +img('icons/upload-receipt.svg')
@@ -22,5 +23,6 @@
     .col-12.mt-40 
         button.btn-lk.btn-red#upload-image(type="submit") 
             span.gold Далее
-    .col-6 
+.row#step-2
+    .col-12.d-flex.justify-content-center 
         #img-crop
