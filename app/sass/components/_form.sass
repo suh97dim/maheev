@@ -14,14 +14,14 @@ textarea
     &:focus
         outline: 1px solid
         background-color: #F9F5E6
-        border-color: $green   
-        &::-webkit-input-placeholder 
+        border-color: $green
+        &::-webkit-input-placeholder
             color: transparent
-        &::-moz-placeholder          
+        &::-moz-placeholder
             color: transparent
-        &:-moz-placeholder           
+        &:-moz-placeholder
             color: transparent
-        &:-ms-input-placeholder      
+        &:-ms-input-placeholder
             color: transparent
 textarea
     height: 170px
@@ -38,7 +38,7 @@ textarea
     font-weight: 400
     line-height: 130%
     letter-spacing: -0.32px
-.datepicker-panel > ul > li.picked, 
+.datepicker-panel > ul > li.picked,
 .datepicker-panel > ul > li.picked:hover
     background-color: $orange!important
     color: #fff!important
@@ -57,40 +57,30 @@ textarea
     width: 100%
     &:focus
         border-color: #FF8925
-        &::-webkit-input-placeholder 
+        &::-webkit-input-placeholder
             color: transparent
-        &::-moz-placeholder          
+        &::-moz-placeholder
             color: transparent
-        &:-moz-placeholder           
+        &:-moz-placeholder
             color: transparent
-        &:-ms-input-placeholder      
+        &:-ms-input-placeholder
             color: transparent
-
-input[type="checkbox"]
-    -webkit-appearance: none
-    width: 18px
-    height: 18px
-    border: 1px solid #8D929F
-    border-radius: 16px
-    margin-right: 13px
-    min-width: 18px
-    &:checked
-        background-image: url('../img/icons/radio-check.svg')
-        background-size: cover
-        border: none
 
 .radio-input
     -webkit-appearance: none
     width: 20px
     height: 20px
-    border: 2px solid #8D929F
-    border-radius: 16px
+    border: none
+    border-radius: 10px
+    border: 1px solid #044A1A
     margin-right: 8px
+    background: $white
     min-width: 20px
     &:checked
         background-image: url('../img/icons/radio-check.svg')
         background-size: cover
         border: none
+        background-color: transparent
 .lk-checkbox
     margin-right: 10px!important
 .radio-wrap
@@ -100,18 +90,18 @@ input[type="checkbox"]
     margin-top: 18px
     padding-left: 22px
 .radio-label
-    color: var(--blue, #071C49)
+    color: $white
     font-size: 16px
-    font-weight: 400
+    font-weight: 600
     line-height: 130%
     letter-spacing: -0.32px
     display: flex
     justify-content: center
     align-items: center
 .text-label
-    color: #8D929F
+    color: #819587
     font-size: 16px
-    font-weight: 400
+    font-weight: 600
     line-height: 130%
     letter-spacing: -0.32px
 label
@@ -122,17 +112,18 @@ label
     cursor: pointer
 .checkbox__text
     font-size: 16px
-    font-weight: 400
+    font-weight: 600
     line-height: 130%
     letter-spacing: -0.32px
-    color: $blue
+    color: #5FB179
 .label-text
     text-decoration: none
-    color: $orange
+    color: $white
     &:hover
-        color: $blue
+        opacity: 0.8
 label.checkbox
     max-width: 100%
+    flex-wrap: wrap
 input[type="checkbox"]:checked + label
     color: $blue
 .checkbox-item-wrap
@@ -166,51 +157,51 @@ input[type="checkbox"]:checked + label
     height: 76px
     padding-left: 31px
     width: 265px
-    &::-webkit-input-placeholder 
+    &::-webkit-input-placeholder
         color: #8D929F
         opacity: 1
-    &::-moz-placeholder          
+    &::-moz-placeholder
         color: #8D929F
         opacity: 1
-    &:-moz-placeholder           
+    &:-moz-placeholder
         color: #8D929F
         opacity: 1
-    &:-ms-input-placeholder      
+    &:-ms-input-placeholder
         color: #8D929F
         opacity: 1
 .focus
     box-shadow: 0 0 36px 0 rgba(255,255,255,.7)
     outline: 2px solid rgba(7,28,73,.05)
     input
-        &::-webkit-input-placeholder 
+        &::-webkit-input-placeholder
             color: transparent
-        &::-moz-placeholder          
+        &::-moz-placeholder
             color: transparent
-        &:-moz-placeholder           
+        &:-moz-placeholder
             color: transparent
-        &:-ms-input-placeholder      
+        &:-ms-input-placeholder
             color: transparent
 .form-control
     font-size: 16px
-    font-family: Rubik
     line-height: 130%
     letter-spacing: -0.32px
     padding: 15px 23px 16px
     border-radius: 16px
-    border: 2px solid rgba(141, 146, 159, 0.40)
-    background: rgba(255, 255, 255, 0.20)
+    font-weight: 600
+    border: 2px solid $white
+    background: $white
     width: 100%
     &:focus
-        border-color: #FF8925
+        border: 2px solid #C29D45
         outline: none
         box-shadow: none
-        &::-webkit-input-placeholder 
+        &::-webkit-input-placeholder
             color: transparent
-        &::-moz-placeholder          
+        &::-moz-placeholder
             color: transparent
-        &:-moz-placeholder           
+        &:-moz-placeholder
             color: transparent
-        &:-ms-input-placeholder      
+        &:-ms-input-placeholder
             color: transparent
 
 .form-control_confirm
@@ -226,9 +217,18 @@ label.checkbox
     background-color: transparent !important
     & + .form-label
         background-color: transparent !important
-
-
-
+.invalid-feedback
+    font-size: 16px
+    color:#ff7c7f
+    font-weight: 600
+.checkbox
+    .invalid-feedback
+        margin-left:30px
+        margin-top: 10px 
+.was-validated .form-control:invalid
+    background-image: url('../img/icons/not-validate.svg')
+.was-validated .form-control:valid
+    background-image: url('../img/icons/is-validate.svg')
 .form-label
     left: 2px
     top: 50%
@@ -329,15 +329,17 @@ label.checkbox
         color: red
 
 .upload-one
+    
     .file-input
-        border-radius: 8px
-        border-radius: 8px
-        padding: 3px
-        border: 3px dotted #8D929F
+        border-radius: 10px
+        border-radius: 10px
+        padding: 1px
+        border: 2px dashed  #5FB179
         background-repeat: no-repeat
         &:focus,
         &:hover
-            border-color: $orange
+            border-color: #5FB179
+            background-color: #5FB179
         &:not(.file-input-new)
             .file-caption
                 padding-right: 0
@@ -358,7 +360,7 @@ label.checkbox
         right: 0
         transform: translate(0,-50%)
         position: absolute
-        background: transparent url('../img/icons/icon-close-red.svg') no-repeat center / 22px auto !important
+        background: transparent url('../img/icons/delete-file.svg') no-repeat center / 22px auto !important
         border: none
         cursor: pointer
         z-index: 5
@@ -380,8 +382,8 @@ label.checkbox
             height: 42px
             position: absolute
             display: inline-block
-            transform: translate(-218%, 1%)
-            background: url('../img/icons/icon_download.svg') no-repeat center / 24px
+            transform: translate(-175%, 1%)
+            background: url('../img/icons/upload-file.svg') no-repeat center / 24px
     .file-caption-name
         width: 140px
         margin-left: 5px
@@ -390,15 +392,13 @@ label.checkbox
         background: none !important
         text-align: center
         transform: translateY(1px)
-        color: #808080
+        color: $white
         font-size: 16px
-        font-style: normal
-        font-weight: 400
-        line-height: normal
+        font-weight: 600
         letter-spacing: -0.64px
         &::placeholder
-            color: #A39C8F
-            font-weight: 500
+            color: $white
+            font-weight: 700
     .fileinput-cancel,
     .fileinput-upload-button
         display: none
@@ -432,6 +432,7 @@ label.checkbox
         color: #fff !important
         background: none !important
         background-color: transparent
+        
         &::placeholder
             opacity: 0 !important
     .fileinput-cancel,
@@ -473,8 +474,10 @@ label.checkbox
         height: 46px
         padding: 8px 4px 8px 0px
         margin: 10px auto 0
+    .checkbox__text 
+        width: calc(100% - 40px)
 @media screen and (max-width: 575px)
-    .banner-form 
+    .banner-form
         max-width: 297px
         height: 42px
         padding: 8px 4px 8px 0px
@@ -482,4 +485,3 @@ label.checkbox
     .banner-form-control
         font-size: 10px
         width: 127px
-        
