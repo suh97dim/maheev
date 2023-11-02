@@ -107,9 +107,6 @@
 // #demo-basic
 //     width: 570px
 //     height: 320px
-#step-2
-    display: none
-
 .gggg
     max-width: 100%
 .upload-photo
@@ -152,6 +149,39 @@ li.li-lk
 #upload-image
     width: 200px
     margin: 0 auto
+
+#step-2
+    opacity: 0
+    display: none
+.fiskal-link
+    font-size: 20px
+    font-weight: 700px
+    color: #fff
+    text-decoration: none
+    border-bottom: 1px dashed #fff
+
+.receved-code-table
+    width: 100%
+    tbody
+        tr
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+.status
+    background-size: 16px
+    font-weight: 500
+    background-repeat: no-repeat
+    padding-left: 24px
+    background-position: center left
+.status_wait
+    background-image: url(../img/icons/wait.svg)
+    color: #689878
+.status_canceled
+    color: #FF6F6F
+    font-weight: 500
+    background-image: url(../img/icons/lose.svg)
+.status_success
+    color: #90F9B1
+    background-image: url(../img/icons/win.svg)
+
 @media screen and (max-width: 1100px)
     .lk-content
         border-radius: 32px
@@ -179,6 +209,14 @@ li.li-lk
         padding: 0 25px 30px 25px
         gap: 10px
         height: 100%
+    .receved-code-table
+        thead
+            th
+                padding: 19px 0
+        tbody
+            td
+                padding: 19px 0
+
 @media screen and (max-width: 768px)
     .main-prize-lk
         display: flex
@@ -199,10 +237,22 @@ li.li-lk
         max-width: 100%
     .cr-viewport.cr-vp-square
         width: 90%!important
-
+    .receved-code-table__wrapper
+        width: 100%
+        overflow-x: scroll
+    .receved-code-table
+        width: 100%
+        min-width: 600px
+    .receved-code-table
+        thead
+            th
+                font-size: 16px
+        tbody
+            td
+                font-size: 16px
 @media screen and (max-width: 575px)
     .lk-content
-        padding: 15px
+        padding: 30px 15px
     .nav-lk-link
         font-size: 16px
     .main-prize-lk
@@ -217,6 +267,7 @@ li.li-lk
             padding-bottom: 6vw
     .lk-tab-title
         font-size: 32px
+        margin-bottom: 24px
     .lk-attention
         padding: 20px
         gap: 25px

@@ -87,14 +87,37 @@
                     <li class="li-lk">в чеке должно отображаться наименование Акционной продукции</li>
                   </ul>
                 </div>
-                <div class="col-12 mt-40"> 
-                  <button class="btn-lk btn-red" id="upload-image" type="submit"> <span class="gold">Далее</span></button>
-                </div>
               </div>
               <div class="row" id="step-2">
                 <div class="col-12 d-flex justify-content-center"> 
                   <div id="img-crop"></div>
                 </div>
+                <div class="row">
+                  <div class="col-4"></div>
+                  <div class="col-4 mt-20"> 
+                    <button class="btn-lk btn-red mx-a w-100" id="other-photo"><span class="gold">Другое фото</span></button>
+                  </div>
+                  <div class="col-4"></div>
+                </div>
+                <div class="row"> 
+                  <div class="col-12 mt-60"> 
+                    <h5 class="gold text-center">Если QR-код не распознается и фискальные признаки не считываются, то введите данные вручную.</h5>
+                    <div class="d-flex justify-content-center"><a class="fiskal-link mx-a" type="button" data-bs-toggle="modal" data-bs-target="#modal-fiskal">Где найти фискальные данные на чеке?</a></div>
+                  </div>
+                </div>
+                <form class="row needs-validation mx-100 mt-40" novalidate>
+                  <div class="col-sm-4 mb-24">
+                    <input class="form-control" type="number" placeholder="Серия" required>
+                    <div class="invalid-feedback">Введите cерию</div>
+                  </div>
+                  <div class="col-sm-4 mb-24">
+                    <input class="form-control" type="number" placeholder="Номер" required>
+                    <div class="invalid-feedback">Введите номер</div>
+                  </div>
+                  <div class="col-sm-6 mb-24">
+                    <button class="btn-lk btn-red w-100 px-0" id="nalog" type="submit"> <span class="gold">Сохранить данные</span></button>
+                  </div>
+                </form>
               </div>
             </div>
             <div class="tab-pane fade lk-content" id="tab-2">
@@ -105,97 +128,79 @@
               </div>
               <div class="row"> 
                 <div class="col-12"> 
-                  <div class="table-responsive">
-                    <table class="receved-code-table g-table" id="appl">
+                  <div class="receved-code-table__wrapper">
+                    <table class="receved-code-table" id="appl">
                       <thead>
                         <tr>
-                          <th class="nowrap date-appl">Дата и время заявки</th>
-                          <th class="nowrap num-appl">№ заявки</th>
-                          <th class="nowrap date-event">Дата розыгрыша</th>
-                          <th class="nowrap type-event">Тип розыгрыша</th>
+                          <th class="nowrap date-appl">Дата и время </th>
+                          <th class="nowrap num-appl"><span class="font-arial"> №</span> заявки</th>
+                          <th class="nowrap date-event">Вид розыгрыша</th>
+                          <th class="nowrap type-event">Дата розыгрыша</th>
                           <th class="status-event">Статус</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>12.11.2022</td>
-                          <td>2</td>
-                          <td>12.11.2022</td>
+                          <td>14.12.2023, 23:00</td>
+                          <td>1340006</td>
                           <td>Еженедельный</td>
+                          <td>14.12.2023</td>
                           <td>
-                            <div class="status">Ожидает розыгрыша</div>
+                            <div class="status status_wait">Ожидает розыгрыша</div>
                           </td>
                         </tr>
                         <tr>
-                          <td>12.11.2022</td>
-                          <td>2</td>
-                          <td>12.11.2022</td>
+                          <td>14.12.2023, 23:00</td>
+                          <td>1340006</td>
                           <td>Еженедельный</td>
+                          <td>14.12.2023</td>
                           <td>
-                            <div class="status">Ожидает розыгрыша</div>
+                            <div class="status status_wait">Участвует сегодня</div>
                           </td>
                         </tr>
                         <tr>
-                          <td>12.11.2022</td>
-                          <td>2</td>
-                          <td>12.11.2022</td>
+                          <td>14.12.2023, 23:00</td>
+                          <td>1340006</td>
                           <td>Еженедельный</td>
-                          <td>
-                            <div class="status status_active">Участвует сегодня</div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>12.11.2022</td>
-                          <td>2</td>
-                          <td>12.11.2022</td>
-                          <td>Еженедельный</td>
+                          <td>14.12.2023</td>
                           <td>
                             <div class="status status_canceled">Не выиграла</div>
                           </td>
                         </tr>
                         <tr>
-                          <td>12.11.2022</td>
-                          <td>2</td>
-                          <td>12.11.2022</td>
+                          <td>14.12.2023, 23:00</td>
+                          <td>1340006</td>
                           <td>Еженедельный</td>
+                          <td>14.12.2023</td>
                           <td>
-                            <div class="status status_success">500 Р</div>
+                            <div class="status status_success">Выигрыш</div>
                           </td>
                         </tr>
                         <tr>
-                          <td>12.11.2022</td>
-                          <td>2</td>
-                          <td>12.11.2022</td>
+                          <td>14.12.2023, 23:00</td>
+                          <td>1340006</td>
                           <td>Еженедельный</td>
+                          <td>14.12.2023</td>
                           <td>
-                            <div class="status">Ожидает розыгрыша</div>
+                            <div class="status status_wait">Ожидает розыгрыша</div>
                           </td>
                         </tr>
                         <tr>
-                          <td>12.11.2022</td>
-                          <td>2</td>
-                          <td>12.11.2022</td>
+                          <td>14.12.2023, 23:00</td>
+                          <td>1340006</td>
                           <td>Еженедельный</td>
+                          <td>14.12.2023</td>
                           <td>
-                            <div class="status">Ожидает розыгрыша</div>
+                            <div class="status status_wait">Ожидает розыгрыша</div>
                           </td>
                         </tr>
                         <tr>
-                          <td>12.11.2022</td>
-                          <td>2</td>
-                          <td>12.11.2022</td>
+                          <td>14.12.2023, 23:00</td>
+                          <td>1340006</td>
                           <td>Еженедельный</td>
+                          <td>14.12.2023</td>
                           <td>
-                            <div class="status">Ожидает розыгрыша</div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>12.11.2022</td>
-                          <td>2</td>
-                          <td>12.11.2022</td>
-                          <td>Еженедельный</td>
-                          <td>
-                            <div class="status">Ожидает розыгрыша</div>
+                            <div class="status status_wait">Ожидает розыгрыша</div>
                           </td>
                         </tr>
                       </tbody>
@@ -662,6 +667,18 @@
                   <button class="btn-lk btn-red w-100 px-0 js-change-modal modal-link-lg text-center" href="#modal-enter" type="button"><span class="gold">Войти в кабинет</span></button>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-fiskal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <h4 class="text-center"><span class="gold">Фискальные знаки на чеке</span><img class="img-fluid mt-24" src="img/fiskal.webp" alt=""/>
+              </h4>
             </div>
           </div>
         </div>

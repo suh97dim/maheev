@@ -20,9 +20,30 @@
             li.li-lk все символы должны быть четко видны
             li.li-lk наличие QR-кода на кассовом чеке обязательно, он должен быть читаемый
             li.li-lk в чеке должно отображаться наименование Акционной продукции
-    .col-12.mt-40 
-        button.btn-lk.btn-red#upload-image(type="submit") 
-            span.gold Далее
+
 .row#step-2
     .col-12.d-flex.justify-content-center 
         #img-crop
+    .row
+        .col-4
+        .col-4.mt-20 
+            button.btn-lk.btn-red#other-photo.mx-a.w-100
+                span.gold Другое фото
+        .col-4
+    .row 
+        .col-12.mt-60 
+            h5.gold.text-center Если QR-код не распознается и фискальные признаки не считываются, то введите данные вручную.
+            .d-flex.justify-content-center
+                a.fiskal-link.mx-a(type="button" data-bs-toggle="modal" data-bs-target="#modal-fiskal") Где найти фискальные данные на чеке?
+
+    form.row.needs-validation.mx-100.mt-40(novalidate)
+        .col-sm-4.mb-24
+            input(type="number" placeholder="Серия" required ).form-control
+            .invalid-feedback Введите cерию
+        .col-sm-4.mb-24
+            input(type="number" placeholder="Номер" required ).form-control
+            .invalid-feedback Введите номер
+        .col-sm-6.mb-24
+            button.btn-lk.btn-red.w-100.px-0#nalog(type="submit") 
+                span.gold Сохранить данные
+        

@@ -138,3 +138,14 @@
                     .col-12 
                         button.btn-lk.btn-red.w-100.px-0(href="#modal-enter" type="button").js-change-modal.modal-link-lg.text-center
                             span.gold Войти в кабинет
+
+.modal#modal-fiskal
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                h4.text-center
+                    span.gold Фискальные знаки на чеке
+                    +img("fiskal.jpg",'','img-fluid mt-24').
+                
