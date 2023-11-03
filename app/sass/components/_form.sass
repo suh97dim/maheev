@@ -219,12 +219,12 @@ label.checkbox
         background-color: transparent !important
 .invalid-feedback
     font-size: 16px
-    color:#ff7c7f
+    color: #ff7c7f
     font-weight: 600
 .checkbox
     .invalid-feedback
-        margin-left:30px
-        margin-top: 10px 
+        margin-left: 30px
+        margin-top: 10px
 .was-validated .form-control:invalid
     background-image: url('../img/icons/not-validate.svg')
 .was-validated .form-control:valid
@@ -266,6 +266,7 @@ label.checkbox
     height: 368px
     min-height: 100%
     .file-preview-thumbnails,
+
     .kv-preview-thumb,
     .kv-file-content,
     .file-preview,
@@ -275,10 +276,11 @@ label.checkbox
         width: 100%
         height: 100%
         max-width: 100%
+        border-radius: 10px
         cursor: pointer
-        background: #353030 url('../img/bg/icon_upload_large.svg') no-repeat center / 238px auto
+        background: #FFF6D8 url('../img/icons/icon_upload_large.svg') no-repeat center / 238px auto
     .file-preview:hover .file-drop-zone
-        background-color: #474343
+        background-color: #FFF6D8
     .file-input:not(.file-input-ajax-new) .file-drop-zone
         padding-bottom: 0
         background-position: center bottom
@@ -287,7 +289,7 @@ label.checkbox
     .kv-file-upload,
     .file-thumb-progress.kv-hidden,
     .file-footer-caption,
-    .close.fileinput-remove
+    .fileinput-remove
         display: none !important
     .file-drop-zone-title
         font-size: 0
@@ -307,13 +309,13 @@ label.checkbox
         width: 25px
         height: 25px
         border: 0 !important
-        background: url(../img/icons/icon_close_red.svg) no-repeat center / 25px 25px !important
+        background: #ffc400 url(../img/icons/delete-file.svg) no-repeat center / 25px 25px !important
         padding: 0 !important
-        opacity: .5
+
         cursor: pointer
         &:hover,
         &:focus
-            opacity: 1
+            opacity: .7
         span
             display: none
     .file-preview-thumbnails
@@ -323,18 +325,22 @@ label.checkbox
     &--small
         .file-drop-zone
             height: 60px !important
-            background-image: url('../img/fileupload-bg-small.png')
+            background: #FFF6D8 url('../img/icons/icon_upload_small.svg') no-repeat center / 238px auto
             background-size: 147px auto
     .file-error-message
         color: red
+    .kv-file-rotate
+        display: none
+    .file-preview-status
+        display: none
 
 .upload-one
-    
+
     .file-input
         border-radius: 10px
         border-radius: 10px
         padding: 1px
-        border: 2px dashed  #5FB179
+        border: 2px dashed #5FB179
         background-repeat: no-repeat
         &:focus,
         &:hover
@@ -432,7 +438,7 @@ label.checkbox
         color: #fff !important
         background: none !important
         background-color: transparent
-        
+
         &::placeholder
             opacity: 0 !important
     .fileinput-cancel,
@@ -468,14 +474,20 @@ label.checkbox
         height: 59px
         padding: 8px 4px 8px 0px
         margin: 5px auto 0
+    .file-upload
+        height: 290px
 @media screen and (max-width: 767px)
     .banner-form
         max-width: 390px
         height: 46px
         padding: 8px 4px 8px 0px
         margin: 10px auto 0
-    .checkbox__text 
+ 
+    .checkbox__text
         width: calc(100% - 40px)
+    .file-upload
+        .file-drop-zone
+            background: #FFF6D8 url('../img/icons/icon_upload_small.svg') no-repeat center / 200px auto
 @media screen and (max-width: 575px)
     .banner-form
         max-width: 297px
